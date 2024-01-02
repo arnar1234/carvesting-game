@@ -47,7 +47,7 @@ player =
 	{
 		"hp" : 6,
 		"blood" : 2,
-		"weapon" : [14],
+		"weapon" : ["Laser Pistol"],
 		"spd" : 2.5,
 		"hat" : -1,
 		"hurtFx" : snDamage2,
@@ -60,7 +60,7 @@ player =
 	{
 		"hp" : 7,
 		"blood" : 1,
-		"weapon" : [2],
+		"weapon" : ["Fire Shotgun"],
 		"spd" : 2.5,
 		"hat" : sFishermanHat,
 		"hurtFx" : snDamage,
@@ -73,7 +73,7 @@ player =
 	{
 		"hp" : 5,
 		"blood" : 0,
-		"weapon" : [9],
+		"weapon" : ["Chainsaw"],
 		"spd" : 2.5,
 		"hat" : -1,
 		"hurtFx" : snDamage,
@@ -86,7 +86,7 @@ player =
 	{
 		"hp" : 8,
 		"blood" : 2,
-		"weapon" : [1],
+		"weapon" : ["Burst Rifle"],
 		"spd" : 2.5,
 		"hat" : -1,
 		"hurtFx" : snDamage2,
@@ -99,7 +99,7 @@ player =
 	{
 		"hp" : 6,
 		"blood" : 1,
-		"weapon" : [4],
+		"weapon" : ["Hunting Rifle"],
 		"spd" : 2.5,
 		"hat" : -1,
 		"hurtFx" : snDamage,
@@ -125,6 +125,7 @@ if(global._stage == 0)
 	global.hp = player[$ global.currentPlayer][$ "hp"];
 	global.hpMax = player[$ global.currentPlayer][$ "hp"];
 	global.weaponList = player[$ global.currentPlayer][$ "weapon"];
+	global.weaponCurrent = 0;
 }
 
 spdMax = player[$ global.currentPlayer][$ "spd"];

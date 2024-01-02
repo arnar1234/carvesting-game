@@ -2,7 +2,7 @@ if(!oPause.pause)
 {
 	if(array_length(global.weaponList) > 1)
 	{
-		if(weaponCurrent == 0)
+		if(global.weaponCurrent == 0)
 		{
 			draw_set_font(fnFontSmall);
 			draw_text_outline(4, 129, name2, #A56969);

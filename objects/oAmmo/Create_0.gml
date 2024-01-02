@@ -6,22 +6,21 @@ size_ = 0;
 //Find what ammo type should spawn
 gunIndex = 0;
 
-with(oGun)
+
+if(global.weaponCurrent == 0)
 {
-	if(weaponCurrent == 0)
-	{
-		if(global.ammo[weapon[global.weaponList[0]][? "Ammo"][0]] >= ammoMax[weapon[global.weaponList[0]][? "Ammo"][0]]) other.gunIndex = 1;
-		else other.gunIndex = 0;
-	}
-	else
-	{
-		if(global.ammo[weapon[global.weaponList[1]][? "Ammo"][0]] >= ammoMax[weapon[global.weaponList[1]][? "Ammo"][0]]) other.gunIndex = 0;
-		else other.gunIndex = 1;
-	}
+	if(global.ammo[global.weapon[$ global.weaponList[0]][$ "Ammo"][0]] >= oGun.ammoMax[global.weapon[$ global.weaponList[0]][$ "Ammo"][0]]) gunIndex = 1;
+	else gunIndex = 0;
 }
+else
+{
+	if(global.ammo[global.weapon[$ global.weaponList[1]][$ "Ammo"][0]] >= oGun.ammoMax[global.weapon[$ global.weaponList[1]][$ "Ammo"][0]]) gunIndex = 0;
+	else gunIndex = 1;
+}
+
 		
 gunIndex = clamp(gunIndex, 0, array_length(global.weaponList)-1);
-ammoIndex = oGun.weapon[global.weaponList[gunIndex]][? "Ammo"][0];
+ammoIndex = global.weapon[$ global.weaponList[gunIndex]][$ "Ammo"][0];
 if(ammoIndex == 0) ammoIndex = irandom_range(1, 5);
 	
 //Text and sound stuff based on ammo type

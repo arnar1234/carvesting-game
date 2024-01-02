@@ -1,4 +1,4 @@
-if(global.weaponList[weaponCurrent] != 0 && !disable)
+if(global.weaponList[global.weaponCurrent] != "Default" && !disable)
 {
 	var angleOffset = -(back*4*image_yscale);
 	if(weaponType[0] == 1) angleOffset = 0;

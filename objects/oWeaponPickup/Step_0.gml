@@ -16,16 +16,16 @@ if(oGame.pickup) && (instance_exists(oGun))
 		
 		with(oGun)
 		{
-			if(weaponCurrent == 0) other.pickupName = name;
+			if(global.weaponCurrent == 0) other.pickupName = name;
 			else other.pickupName = name2;
 			
 			other.sprite_index = asset_get_index(sprite_get_name(sprite) + "Center");
 
-			other.changeNumber = global.weaponList[weaponCurrent];
+			other.changeNumber = global.weaponList[global.weaponCurrent];
 			
 			if(array_length(global.weaponList) > 1)
 			{
-				global.weaponList[weaponCurrent] = other.weaponNumber;
+				global.weaponList[global.weaponCurrent] = other.weaponNumber;
 				other.weaponNumber = other.changeNumber;
 				changeWeapon();
 				cooldown = 0;
@@ -36,7 +36,7 @@ if(oGame.pickup) && (instance_exists(oGun))
 			else
 			{
 				array_push(global.weaponList, other.weaponNumber);
-				weaponCurrent = 1;
+				global.weaponCurrent = 1;
 				
 				changeWeapon();
 				cooldown = 0;

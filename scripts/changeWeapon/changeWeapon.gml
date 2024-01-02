@@ -1,42 +1,42 @@
 function changeWeapon(_guiThing = true)
 {
-	var finalWeapon = weapon[global.weaponList[weaponCurrent]];
+	var finalWeapon = global.weapon[$ global.weaponList[global.weaponCurrent]];
 	
-	name = weapon[global.weaponList[0]][? "Name"];
-	if(array_length(global.weaponList) > 1) name2 = weapon[global.weaponList[1]][? "Name"];
-	weaponType = finalWeapon[? "Weapon Type"];
-	auto = finalWeapon[? "Automatic"];
-	burstMax = finalWeapon[? "BurstMax"];
-	burstRate = finalWeapon[? "BurstRate"];
-	damage = finalWeapon[? "Damage"];
-	fireDamage = finalWeapon[? "Fire Damage"];
-	cooldownMax = finalWeapon[? "Cooldown"];
-	spd = finalWeapon[? "Speed"];
-	randomSpd = finalWeapon[? "Random Speed"];
-	pushback = finalWeapon[? "Pushback"];
-	enemyKnockback = finalWeapon[? "Enemy Knockback"];
-	pattern = finalWeapon[? "Pattern"];
-	recoil = finalWeapon[? "Recoil"];
-	screen_shake = finalWeapon[? "ScreenShake"];
-	sound = finalWeapon[? "Sound"];
-	pickupSound = finalWeapon[? "Pickup Sound"];
-	sprite = finalWeapon[? "Sprite"];
-	bulletSprite = finalWeapon[? "BulletSprite"];
-	bulletType = finalWeapon[? "BulletType"][0];
-	bulletTypeSettings = finalWeapon[? "BulletType"];
-	bulletPos = finalWeapon[? "BulletPos"];
-	particleType = finalWeapon[? "Particle Type"];
-	bulletDustType = finalWeapon[? "Bullet Dust Type"];
-	amount = finalWeapon[? "Amount"];
-	ammoType = finalWeapon[? "Ammo"];
-	muzzle = finalWeapon[? "Muzzle"];
-	shell = finalWeapon[? "Shell"];
-	lazer = finalWeapon[? "Lazer"];
-	homing = finalWeapon[? "Homing"];
-	frict = finalWeapon[? "Friction"];
-	bounce = finalWeapon[? "Bounce"];
-	backMax = finalWeapon[? "Back"];
-	zoom = finalWeapon[? "Zoom"];
+	name = global.weaponList[0];
+	if(array_length(global.weaponList) > 1) name2 = global.weaponList[1];
+	weaponType = finalWeapon[$ "Weapon Type"];
+	auto = finalWeapon[$ "Automatic"];
+	burstMax = finalWeapon[$ "BurstMax"];
+	burstRate = finalWeapon[$ "BurstRate"];
+	damage = finalWeapon[$ "Damage"];
+	fireDamage = finalWeapon[$ "Fire Damage"];
+	cooldownMax = finalWeapon[$ "Cooldown"];
+	spd = finalWeapon[$ "Speed"];
+	randomSpd = finalWeapon[$ "Random Speed"];
+	pushback = finalWeapon[$ "Pushback"];
+	enemyKnockback = finalWeapon[$ "Enemy Knockback"];
+	pattern = finalWeapon[$ "Pattern"];
+	recoil = finalWeapon[$ "Recoil"];
+	screen_shake = finalWeapon[$ "ScreenShake"];
+	sound = finalWeapon[$ "Sound"];
+	pickupSound = finalWeapon[$ "Pickup Sound"];
+	sprite = finalWeapon[$ "Sprite"];
+	bulletSprite = finalWeapon[$ "BulletSprite"];
+	bulletType = finalWeapon[$ "BulletType"][0];
+	bulletTypeSettings = finalWeapon[$ "BulletType"];
+	bulletPos = finalWeapon[$ "BulletPos"];
+	particleType = finalWeapon[$ "Particle Type"];
+	bulletDustType = finalWeapon[$ "Bullet Dust Type"];
+	amount = finalWeapon[$ "Amount"];
+	ammoType = finalWeapon[$ "Ammo"];
+	muzzle = finalWeapon[$ "Muzzle"];
+	shell = finalWeapon[$ "Shell"];
+	lazer = finalWeapon[$ "Lazer"];
+	homing = finalWeapon[$ "Homing"];
+	frict = finalWeapon[$ "Friction"];
+	bounce = finalWeapon[$ "Bounce"];
+	backMax = finalWeapon[$ "Back"];
+	zoom = finalWeapon[$ "Zoom"];
 	
 	//Animation
 	canshoot = false;
@@ -68,5 +68,5 @@ function changeWeapon(_guiThing = true)
 	
 	//Width of sprite
 	sprite_width_ = abs(sprite_width - sprite_xoffset);
-	handSprite = asset_get_index(sprite_get_name(finalWeapon[? "Sprite"]) + "Hand");
+	handSprite = asset_get_index(sprite_get_name(finalWeapon[$ "Sprite"]) + "Hand");
 }

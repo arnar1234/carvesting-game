@@ -1,4 +1,4 @@
-if(global.weaponList[weaponCurrent] != 0 && !disable) //Make sure not holding stuff
+if(global.weaponList[global.weaponCurrent] != "Default" && !disable) //Make sure not holding stuff
 {
 	//Calculating Movement
 	finalMeleeAngle = lerp(finalMeleeAngle, meleeAngle, 0.4);
@@ -293,8 +293,8 @@ if(oGame.switchW)
 	{
 		if(array_length(global.weaponList) > 1)
 		{
-			if(weaponCurrent == 0) weaponCurrent = 1;
-			else weaponCurrent = 0;
+			if(global.weaponCurrent == 0) global.weaponCurrent = 1;
+			else global.weaponCurrent = 0;
 			changeWeapon();
 			cooldown = 0;
 			burst = 0;
