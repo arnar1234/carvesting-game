@@ -1,0 +1,1 @@
+if(!enemyShot) audio_stop_sound(snRpgLoop);

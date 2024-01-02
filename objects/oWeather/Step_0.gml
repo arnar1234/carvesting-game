@@ -1,0 +1,1 @@
+if(global._weather == 0 or global.weatherSettings == false) instance_destroy();

@@ -1,0 +1,1 @@
+if(surface_exists(enemySurface)) draw_surface(enemySurface, 0, 0);

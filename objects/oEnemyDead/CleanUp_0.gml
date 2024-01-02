@@ -1,0 +1,1 @@
+if(surface_exists(enemySurface)) surface_free(enemySurface);

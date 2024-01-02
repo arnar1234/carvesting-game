@@ -1,0 +1,2 @@
+enemyShot = false;
+doOnce = false;

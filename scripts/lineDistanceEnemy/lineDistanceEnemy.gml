@@ -1,0 +1,12 @@
+function lineDistanceEnemy(xx, yy)
+{
+	var _distance = 5;
+	
+	while(!tilemap_get_at_pixel(oRandomGeneration._wall_map_id, xx, yy) and !place_meeting(xx, yy, oEnemy))
+	{
+		xx += lengthdir_x(_distance, image_angle);
+		yy += lengthdir_y(_distance, image_angle);
+	}
+	
+	return [xx, yy];
+}

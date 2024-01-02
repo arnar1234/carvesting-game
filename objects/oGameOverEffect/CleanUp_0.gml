@@ -1,0 +1,1 @@
+if(surface_exists(gameSurface)) surface_free(gameSurface);

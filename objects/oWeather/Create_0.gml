@@ -1,0 +1,1 @@
+if(global._weather != 0) alarm[global._weather] = 1;

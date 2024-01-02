@@ -1,0 +1,1 @@
+enemySurface = -1;

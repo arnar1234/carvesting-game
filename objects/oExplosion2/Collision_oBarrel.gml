@@ -1,0 +1,1 @@
+other.fire += 1;

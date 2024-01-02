@@ -1,0 +1,1 @@
+for(var i = 0; i < array_length(enemyStats); i++) ds_map_destroy(enemyStats[i]);
