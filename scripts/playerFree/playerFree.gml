@@ -82,17 +82,6 @@ function playerFree()
 				state = PLAYER.WALLS;
 			}
 		break;
-		
-		case 4:
-			if(oGame.secondaryPressed)
-			{
-				if(stamina > 0)
-				{
-					stamina -= 2;
-					destroyTilesSmooth(x, y);
-				}
-			}
-		break;
 	}
 
 	//Animation
